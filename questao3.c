@@ -1,5 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+void placaerrada(char dia[]) {
+    if(strcmp(dia, "SEGUNDA-FEIRA") != 0 && strcmp(dia, "TERCA-FEIRA") != 0 
+    && strcmp(dia, "QUARTA-FEIRA") != 0 && strcmp(dia, "QUINTA-FEIRA") != 0
+    && strcmp(dia, "SEXTA-FEIRA") != 0 && strcmp(dia, "SABADO") != 0
+    && strcmp(dia, "DOMINGO") != 0) {
+        printf("Dia da semana invalido\n");
+    }
+
+}
 
 void segundaFeira(char placa[]) {
     if (placa[7] == '1' || placa[7] == '0') {
@@ -126,6 +135,8 @@ int main() {
     } else {
         printf("Placa invalida\n");
     }
+    
+    placaerrada(dia);
     
     return 0;
 }
